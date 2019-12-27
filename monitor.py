@@ -18,13 +18,13 @@ FROM = os.getenv('FROM_ADDRESS')
 FROM_PASS = os.getenv('FROM_PASS')
 TO = os.getenv('TO_ADDRESS')
 NODE_1 = os.getenv('NODE_1')
-Node_2 = os.getenv('Node_2')
+NODE_2 = os.getenv('NODE_2')
 
 yag = yagmail.SMTP(FROM, FROM_PASS)
 
 node_list = [
     NODE_1 + '/json_rpc',
-    Node_2 + '/json_rpc'
+    NODE_2 + '/json_rpc'
     ]
 
 def node_selector(node_list):
