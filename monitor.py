@@ -24,7 +24,8 @@ yag = yagmail.SMTP(FROM, FROM_PASS)
 
 node_list = [
     NODE_1 + '/json_rpc',
-    Node_2 + '/json_rpc']
+    Node_2 + '/json_rpc'
+    ]
 
 def node_selector(node_list):
     for x in node_list:
@@ -41,7 +42,18 @@ if __name__ == "__main__":
 
   try:
     url = node_selector(node_list)
+    if url == None:
+      status_logger.logger.warning("Unable to connect to a Loki remote node.")
+      no_node_subj = "Unable to connect to a Loki remote node."
+      no_node_body = "Unable to connect to a Loki remote node. No nodes in your node list were available. Your service node monitor has stopped. Please investigate the issue."
+      yag.send(TO, no_node_subj, no_node_body)
+      raise ValueError("Unable to connect to a Loki remote node. Remote node cannot be 'None'.")
+    else:
+      pass
   except KeyboardInterrupt:
+    sys.exit()
+  except ValueError as error:
+    status_logger.logger.exception("Exception occured\n")
     sys.exit()
   except (Timeout, ConnectTimeout, ReadTimeout) as e:
     status_logger.logger.exception("Exception occured\n")
@@ -83,8 +95,19 @@ if __name__ == "__main__":
     except (Timeout, ConnectTimeout, ReadTimeout) as e:
       status_logger.logger.exception("Exception occured\n")
       time.sleep(60)
-      status_logger.logger.info("Reconnecting...")
-      url = node_selector(node_list)
-      status_logger.logger.info(f"Connected to: {url}")
+      try:
+        status_logger.logger.info("Reconnecting...")
+        url = node_selector(node_list)
+        if url == None:
+          status_logger.logger.warning("Unable to connect to a Loki remote node.")
+          no_node_subj = "Unable to connect to a Loki remote node."
+          no_node_body = "Unable to connect to a Loki remote node. No nodes in your node list were available. Your service node monitor has stopped. Please investigate the issue."
+          yag.send(TO, no_node_subj, no_node_body)
+          raise ValueError("Unable to connect to a Loki remote node. Remote node cannot be 'None'.")
+        else:
+          status_logger.logger.info(f"Connected to: {url}")
+      except ValueError as error:
+        status_logger.logger.exception("Exception occured\n")
+        sys.exit()
     except Exception as e:
       status_logger.logger.exception("Exception occured\n")
