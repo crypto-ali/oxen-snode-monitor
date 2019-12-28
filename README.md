@@ -7,6 +7,7 @@ Please note, this is very early development for this script, please use at your 
 **To install and run:**
  - Clone repo
  - CD into repo dir
+ - Create virtual enviroment and activate it. ex. `python -m venv venv`
  - Install required modules: `pip install -r requirements.txt`
  - Create ENV file from sample env file: `cp sample.env.txt .env`
  - Edit ENV file in your preferred text editor and save.
@@ -15,9 +16,11 @@ Please note, this is very early development for this script, please use at your 
 
 
 **To Do:**
- - General code improvements
- - Improve error handling
- - Add ability to cycle through a list of public nodes to find one that is online in case the previous one goes down or is temporarily unavailable.
- - Add ability to monitor more than one Loki Service Node.
- - Ability to run as a system service.
+ - [x] General code improvements
+ - [ ] General overall improvment completed. Refine code further with later updates.
+ - [x] Improve error handling
+ - [x] Add ability to cycle through a list of public nodes to find one that is online in case the previous one goes down or is temporarily unavailable.
+ - [ ] Find more reliable remote Loki nodes to add to default list in sample.env file.
+ - [ ] Add ability to monitor more than one Loki Service Node.
+ - [ ] Ability to run as a system service.
 
