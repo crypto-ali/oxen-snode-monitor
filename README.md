@@ -25,9 +25,11 @@ Please note, this is very early development for this script, please use at your 
  - [ ] Ability to run as a system service.
 
 **Bug reporting:**
+
 If you find a bug while using this script, please open an issue to report it.
 
 **Contributing:**
+
 If you'd like to contribute to this script:
  - Fork the repo
  - Open an issue and include info about what improvements you want to add
