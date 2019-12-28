@@ -36,6 +36,7 @@ If you'd like to contribute to this script:
  - Submit a PR
 
 **Tips:**
+
 If you use and like this Loki Service Node Monitor Script and want to send me a tip as gratitude, you can send Loki tips here:
 
 `LWwK1wqjC3ecKbxdMz8CVt1MdoEqbDQMiCdjWyWziQ3J9Yyi67w1DVZYXypPVx9uRmUppEAQ8R15ief8mCRMHwWsNsweZGF`
