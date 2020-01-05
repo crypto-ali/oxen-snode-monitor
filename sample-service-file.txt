@@ -1,0 +1,12 @@
+[Unit]
+Description=Loki Service Node Monitor
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/path/to/ENV/bin/python /path/to/python/script.py
+Restart=always
+RestartSec=30s
+
+[Install]
+WantedBy=multi-user.target
