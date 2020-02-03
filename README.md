@@ -17,7 +17,7 @@ Please note, this is very early development for this script, please use at your 
 
 
 ### Run as a system service:
- - `cd /lib/systemd/system`
+ - `cd /etc/systemd/system`
  - Create a new file with .service file extension and open it to edit. ex. `sudo vi snodemonit.service`
  - Paste the contents of the included sample-service-file.txt into the new file.
  - Update the ExecStart line to include the actual paths to your virtual environment Python and your monitor.py script.
@@ -55,7 +55,7 @@ To disable service autostart on system boot, run:
 
 If you make changes to your service monitor files (ex. the .env file), make sure to restart your monitor service file so that those changes are picked up.
 
-If you make changes to the .service file in /lib/systemd/system, make sure to run the daemon-reload command to have your service file changes get picked up by systemd.
+If you make changes to the .service file in /etc/systemd/system, make sure to run the daemon-reload command to have your service file changes get picked up by systemd.
 
 Lastly, to review the logs of your service node monitor when running as a system service, run:
 
