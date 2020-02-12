@@ -1,6 +1,6 @@
 # Simple Loki Service Node Monitor and Email Alert Script
 
-A simple script to easily monitor your Loki Service Node. If your service node's last accepted uptime proof becomes older than 66 minutes, the script will email you an alert. The script is currently set to check your node's uptime proof age every five minutes.
+A simple script to easily monitor your Loki Service Nodes. If your service node's last accepted uptime proof becomes older than 66 minutes, the script will email you an alert. The script is currently set to check your node's uptime proof age every five minutes.
 
 Please note, this script is in early development, please use at your own risk. I provide no guarantees of accuracy or functionality.
 
@@ -24,8 +24,8 @@ Please note, this script is in early development, please use at your own risk. I
  - Create a new file with .service file extension and open it to edit. ex. `sudo vi snodemonit.service`
  - Paste the contents of the included sample-service-file.txt into the new file.
  - Update the ExecStart line to include the actual paths to your virtual environment Python and your monitor.py script.
-   - Example virtual environment path: `/home/USER/loki-snode-monitor/venv/bin/python`
-   - Example path to monitor script: `/home/USER/loki-snode-monitor/venv/monitor.py`
+   - Example virtual environment path: `/home/$USER/loki-snode-monitor/venv/bin/python`
+   - Example path to monitor script: `/home/$USER/loki-snode-monitor/venv/monitor.py`
  - Save the file.
  - Run `sudo systemctl daemon-reload` to reload the systemd manager configuration.
  - To start the monitor service, run: `sudo systemctl start snodemonit.service` (This assumes you named your service file *snodemonit.service*)
@@ -87,6 +87,7 @@ Lastly, to review the logs of your service node monitor when running as a system
  - Fixed error/exception handling.
  - Refactored code.
  - Moved Service Nodes and Remote Nodes from .env file to separate Python file to import as module.
+ - Updated dependencies and requirements file.
 
 
 ### 0.0.3 - 2020-1-5:
@@ -122,9 +123,9 @@ If you find a bug while using this script, please open an issue to report it.
 ## Contributing:
 
 If you'd like to contribute to this script:
- - Fork the repo
- - Open an issue and include info about what improvements you want to add
- - Submit a PR
+ 1. Fork the repo
+ 1. Open an issue and include info about what improvements you want to add
+ 1. Submit a PR
 
 ### Tips:
 
