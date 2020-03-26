@@ -9,7 +9,7 @@ snode_list = [
 change them, or add more."""
 remote_node_list = [
     'http://lokiblocks.com:22023/json_rpc',
-    'http://public.loki.foundation:22023/json_rpc'
+    'http://public.loki.foundation:22023/json_rpc',
     'http://nodes.hashvault.pro:22023/json_rpc',
     'http://imaginary.stream:22023/json_rpc',
     'http://node.loki-pool.com:18081/json_rpc'
