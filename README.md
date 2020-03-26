@@ -77,6 +77,11 @@ Lastly, to review the logs of your service node monitor when running as a system
 
 ## Changelog:
 
+### 0.0.5 - 2020-3-25:
+
+**Changed**
+ - Updated ***remote_node_list*** in `sample_node_list` to include additional remote nodes for getting uptime proofs.
+
 ### 0.0.4 - 2020-2-12:
 
 **Added**
