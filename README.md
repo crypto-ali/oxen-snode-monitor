@@ -70,12 +70,24 @@ Lastly, to review the logs of your service node monitor when running as a system
  - [ ] General overall improvement completed. Refine code further with later updates.
  - [x] Improve error handling
  - [x] Add ability to cycle through a list of public nodes to find one that is online in case the previous one goes down or is temporarily unavailable.
- - [ ] Find more reliable remote Loki nodes to add to default list in sample.env file.
+ - [x] Find more reliable remote Loki nodes to add to default list.
  - [x] Add ability to monitor more than one Loki Service Node.
  - [x] Ability to run as a system service.
 
 
 ## Changelog:
+
+### 0.0.6 - 2020-10-14:
+
+**Added**
+ - Convert function: Convert time delta of uptime proof age from seconds to HH:MM:SS to make INFO level logs a bit more readable.
+ - No Node Alert function: Rolled code block used twice into a function that logs warning when no remote node connection can be made. Function also raises Type Error and exits.
+
+**Changed**
+ - Updated `node_selector` function to use a POST request. GET requests started returning 404 after Salty Saga hardfork.
+ - General code refactor.
+ - Corrected 'occurred' typo.  
+ - Cleaned up unused, commented out code from `status_logger`.
 
 ### 0.0.5 - 2020-3-25:
 

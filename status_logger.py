@@ -2,16 +2,12 @@
 
 import os
 import logging
-#from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv()
 
 # Variables
 LOG_LEVEL = os.getenv('LOG_LEVEL')
-#p = Path()
-#p.resolve()
-#status_file = p.resolve()  / 'logs' / 'status.log'
 
 logger = logging.getLogger(__name__)
 logger_level = logging.getLevelName(LOG_LEVEL)
