@@ -3,6 +3,8 @@ node_list.py
 
 # Directories
 
+# PyCharm
+.idea/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
