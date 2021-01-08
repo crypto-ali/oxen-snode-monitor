@@ -77,6 +77,11 @@ Lastly, to review the logs of your service node monitor when running as a system
 
 ## Changelog:
 
+### 0.0.7 - 2021-1-8:
+
+**Changed**
+- Bump lxml from 4.5.2 to 4.6.2. [PR 4](https://github.com/crypto-ali/loki-snode-monitor/pull/4)
+
 ### 0.0.6 - 2020-10-14:
 
 **Added**
