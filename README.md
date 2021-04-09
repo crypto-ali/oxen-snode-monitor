@@ -77,6 +77,12 @@ Lastly, to review the logs of your service node monitor when running as a system
 
 ## Changelog:
 
+### 0.0.8 - 2021-4-9:
+
+**Changed**
+- Bump lxml from 4.6.2 to 4.6.3. [PR 5](https://github.com/crypto-ali/loki-snode-monitor/pull/5)
+- Updated `sample_node_list.py` to include `oxen.observer` block explorer in list of remote nodes. [PR 6](https://github.com/crypto-ali/loki-snode-monitor/pull/6)
+
 ### 0.0.7 - 2021-1-8:
 
 **Changed**
