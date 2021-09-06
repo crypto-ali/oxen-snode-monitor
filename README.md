@@ -74,6 +74,9 @@ Lastly, to review the logs of your service node monitor when running as a system
  - [x] Add ability to monitor more than one Loki Service Node.
  - [x] Ability to run as a system service.
 
+## Changelog:
+
+The changelog has been moved to its own file: [changelog.md](changelog.md)
 
 ## Bug reporting:
 
