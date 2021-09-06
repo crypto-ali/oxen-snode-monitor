@@ -8,5 +8,5 @@ lxml==4.6.3
 premailer==3.7.0
 python-dotenv==0.14.0
 requests==2.24.0
-urllib3==1.25.10
+urllib3==1.26.5
 yagmail==0.14.245
