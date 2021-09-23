@@ -1,5 +1,3 @@
-# Loki Service Node Monitor and Email Alert
-
 import os
 import sys
 import requests
