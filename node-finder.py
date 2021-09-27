@@ -25,21 +25,21 @@ def open_snode_finder(remote_node_url, min_val, max_val):
 
     all_snodes = r['result']['service_node_states']
 
-    open_for_contribution = []
+    awaiting_contribution = []
 
     for index, item in enumerate(all_snodes):
         if all_snodes[index]['active'] is False:
-            open_for_contribution.append(item)
+            awaiting_contribution.append(item)
 
     matching_nodes = []
 
-    for index, item in enumerate(open_for_contribution):
-        if min_val < (item['staking_requirement'] - item['total_contributed']) \
-                / (4 - len(item['contributors'])) / 1000000000 < max_val:
+    for index, item in enumerate(awaiting_contribution):
+        open_for_contribution = (item['staking_requirement'] - item['total_contributed']) / 1000000000
+        minimum_contribution = (item['staking_requirement'] - item['total_contributed']) \
+            / (4 - len(item['contributors'])) / 1000000000
+        if min_val < open_for_contribution < max_val or min_val < minimum_contribution < max_val:
             matched_pubkey = item['service_node_pubkey']
-            matched_minimum_contribution = ((item['staking_requirement'] - item['total_contributed'])
-                                            / (4 - len(item['contributors']))) / 1000000000
-            matched_tuple = (matched_pubkey, matched_minimum_contribution)
+            matched_tuple = (matched_pubkey, open_for_contribution, minimum_contribution)
             matching_nodes.append(matched_tuple)
 
     return matching_nodes
@@ -78,7 +78,8 @@ if __name__ == '__main__':
                 subject = f"Found {len(open_snodes)} open snodes."
                 msg = f""
                 for i in open_snodes:
-                    msg += f"Service Node PubKey: {i[0]}\n\tMinimum contribution: {i[1]}\n\n"
+                    msg += f"Service Node PubKey: {i[0]}\n\tOpen for contribution: {i[1]}\n\t" \
+                           f"Minimum contribution: {i[2]}\n\n"
                 yag.send(TO, subject, msg)
                 status_logger.logger.info("Notification sent. Sleeping 5 minutes.")
                 time.sleep(300)
