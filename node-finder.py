@@ -37,7 +37,9 @@ def open_snode_finder(remote_node_url, min_val, max_val):
         open_for_contribution = (item['staking_requirement'] - item['total_contributed']) / 1000000000
         minimum_contribution = (item['staking_requirement'] - item['total_contributed']) \
             / (4 - len(item['contributors'])) / 1000000000
-        if min_val < open_for_contribution < max_val or min_val < minimum_contribution < max_val:
+        if min_val <= open_for_contribution <= max_val \
+                or min_val <= minimum_contribution <= max_val \
+                or minimum_contribution < min_val <= open_for_contribution / 2 <= max_val:
             matched_pubkey = item['service_node_pubkey']
             matched_tuple = (matched_pubkey, open_for_contribution, minimum_contribution)
             matching_nodes.append(matched_tuple)
