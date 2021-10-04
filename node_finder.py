@@ -35,13 +35,13 @@ def open_snode_finder(remote_node_url, min_val, max_val):
 
     for index, item in enumerate(awaiting_contribution):
         open_for_contribution = (item['staking_requirement'] - item['total_contributed']) / 1000000000
-        minimum_contribution = (item['staking_requirement'] - item['total_contributed']) \
-            / (4 - len(item['contributors'])) / 1000000000
+        spots_available = 4 - len(item['contributors'])
+        minimum_contribution = open_for_contribution / spots_available
         if min_val <= open_for_contribution <= max_val \
                 or min_val <= minimum_contribution <= max_val \
                 or minimum_contribution < min_val <= open_for_contribution / 2 <= max_val:
             matched_pubkey = item['service_node_pubkey']
-            matched_tuple = (matched_pubkey, open_for_contribution, minimum_contribution)
+            matched_tuple = (matched_pubkey, open_for_contribution, minimum_contribution, spots_available)
             matching_nodes.append(matched_tuple)
 
     return matching_nodes
@@ -81,7 +81,8 @@ if __name__ == '__main__':
                 msg = f""
                 for i in open_snodes:
                     msg += f"Service Node PubKey: {i[0]}\n\tOpen for contribution: {i[1]}\n\t" \
-                           f"Minimum contribution: {i[2]}\n\n"
+                           f"Minimum contribution: {i[2]}\n\t" \
+                           f"Spots remaining: {i[3]}\n\n"
                 yag.send(TO, subject, msg)
                 status_logger.logger.info("Notification sent. Sleeping 5 minutes.")
                 time.sleep(300)

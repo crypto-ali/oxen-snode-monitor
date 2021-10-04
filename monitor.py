@@ -23,7 +23,7 @@ def convert(seconds):
 
 
 def node_selector(node_list):
-    """Connect to a Loki remote node to get service node uptime data."""
+    """Connect to a Oxen remote node to get service node uptime data."""
     for x in node_list:
         try:
             payload = {}
@@ -47,15 +47,15 @@ def node_selector(node_list):
 
 def no_node_alert():
     """If no remote node is available for connection. Call this function to trigger an alert."""
-    status_logger.logger.warning("Unable to connect to a Loki remote node.")
-    no_node_subj = "Unable to connect to a Loki remote node."
+    status_logger.logger.warning("Unable to connect to a Oxen remote node.")
+    no_node_subj = "Unable to connect to a Oxen remote node."
 
-    no_node_body = 'Unable to connect to a Loki remote node. No nodes in your node list were available.' \
+    no_node_body = 'Unable to connect to a Oxen remote node. No nodes in your node list were available.' \
                    'Your service node monitor has stopped. Please investigate the issue.'
 
     yag.send(TO, no_node_subj, no_node_body)
 
-    raise TypeError("Unable to connect to a Loki remote node. Remote node cannot be 'None'.")
+    raise TypeError("Unable to connect to a Oxen remote node. Remote node cannot be 'None'.")
 
 
 def snode_checker(service_node_list, remote_node_url):
@@ -75,7 +75,7 @@ def snode_checker(service_node_list, remote_node_url):
             snlup = sns['result']['service_node_states'][0]['last_uptime_proof']
             snlup_time = time.strftime('%b %d, %Y - %I:%M:%S %p', time.localtime(snlup))
 
-            status_logger.logger.info(f"Your Loki Service Node's last uptime proof was received at: {snlup_time}")
+            status_logger.logger.info(f"Your Oxen Service Node's last uptime proof was received at: {snlup_time}")
 
             # Get monitor server's current time.
             current_timestamp = int(time.time())
@@ -94,15 +94,15 @@ def snode_checker(service_node_list, remote_node_url):
                                              f"Check on the following Service Node immediately: " +
                                              f"{service_node_list[i]}")
 
-                uptime_warning_subject = "URGENT: Loki Service Node Uptime Proof not received"
+                uptime_warning_subject = "URGENT: Oxen Service Node Uptime Proof not received"
 
-                uptime_warning_body = (f"Your Loki Service Node uptime proof was last accepted by the network at " 
+                uptime_warning_body = (f"Your Oxen Service Node uptime proof was last accepted by the network at " 
                                        f"{snlup_time}, over {uptime_proof_age} seconds ago.\n\nCheck on the following "
                                        f"Service Node immediately:\n\n{snode_list[i]}")
 
                 yag.send(TO, uptime_warning_subject, uptime_warning_body)
             else:
-                status_logger.logger.info(f"Loki service node operational. Last uptime proof accepted at: "
+                status_logger.logger.info(f"Oxen service node operational. Last uptime proof accepted at: "
                                           f"{snlup_time}. Last uptime proof accepted {hrupa} ago.")
         except KeyboardInterrupt:
             sys.exit()
@@ -133,7 +133,7 @@ if __name__ == "__main__":
                 no_node_alert()
             else:
                 status_logger.logger.info(f"Connected to: {url}")
-                status_logger.logger.info("Getting your Loki Service Node last uptime proof.")
+                status_logger.logger.info("Getting your Oxen Service Node last uptime proof.")
         except KeyboardInterrupt:
             sys.exit()
         except TypeError as error:

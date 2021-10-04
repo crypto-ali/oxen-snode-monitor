@@ -1,25 +1,36 @@
 ## Changelog:
 
+### 0.1.0 - 2021-10-4:
+
+**Changed**
+- Updated README to include info on the new [node finder](node_finder.py) script.
+- Updated README to replace mentions of Loki with Oxen. (Finally catching up with the rebranding.)
+- Updated name of repo to `oxen-snode-monitor`
+
+**Added**
+- Node Finder: Script that scans open nodes for contribution amounts within your desired range. See the README file for
+more info.
+
 ### 0.0.9 - 2021-9-6:
 
 **Changed**
-- Bumped urllib3 from 1.25.10 to 1.26.5. [PR 7](https://github.com/crypto-ali/loki-snode-monitor/pull/7)
-- Updated Requests and Yagmail, along with their dependencies. [PR 8](https://github.com/crypto-ali/loki-snode-monitor/pull/8)
-- Removed changelog section from README. [PR 8](https://github.com/crypto-ali/loki-snode-monitor/pull/8)
+- Bumped urllib3 from 1.25.10 to 1.26.5. [PR 7](https://github.com/crypto-ali/oxen-snode-monitor/pull/7)
+- Updated Requests and Yagmail, along with their dependencies. [PR 8](https://github.com/crypto-ali/oxen-snode-monitor/pull/8)
+- Removed changelog section from README. [PR 8](https://github.com/crypto-ali/oxen-snode-monitor/pull/8)
 
 **Added**
-- Changelog file. [PR 8](https://github.com/crypto-ali/loki-snode-monitor/pull/8)
+- Changelog file. [PR 8](https://github.com/crypto-ali/oxen-snode-monitor/pull/8)
 
 ### 0.0.8 - 2021-4-9:
 
 **Changed**
-- Bump lxml from 4.6.2 to 4.6.3. [PR 5](https://github.com/crypto-ali/loki-snode-monitor/pull/5)
-- Updated `sample_node_list.py` to include `oxen.observer` block explorer in list of remote nodes. [PR 6](https://github.com/crypto-ali/loki-snode-monitor/pull/6)
+- Bump lxml from 4.6.2 to 4.6.3. [PR 5](https://github.com/crypto-ali/oxen-snode-monitor/pull/5)
+- Updated `sample_node_list.py` to include `oxen.observer` block explorer in list of remote nodes. [PR 6](https://github.com/crypto-ali/oxen-snode-monitor/pull/6)
 
 ### 0.0.7 - 2021-1-8:
 
 **Changed**
-- Bump lxml from 4.5.2 to 4.6.2. [PR 4](https://github.com/crypto-ali/loki-snode-monitor/pull/4)
+- Bump lxml from 4.5.2 to 4.6.2. [PR 4](https://github.com/crypto-ali/oxen-snode-monitor/pull/4)
 
 ### 0.0.6 - 2020-10-14:
 
