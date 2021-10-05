@@ -14,4 +14,5 @@ remote_node_list = [
     'http://imaginary.stream:22023/json_rpc',
     'http://node.loki-pool.com:18081/json_rpc',
     'http://lokiblocks.com:22023/json_rpc',
+    'http://explorer.oxen.aussie-pools.com:18081/json_rpc',
 ]

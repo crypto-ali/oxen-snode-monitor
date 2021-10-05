@@ -6,6 +6,7 @@
 - Updated README to include info on the new [node finder](node_finder.py) script.
 - Updated README to replace mentions of Loki with Oxen. (Finally catching up with the rebranding.)
 - Updated name of repo to `oxen-snode-monitor`
+- Updated `sample_node_list.py` to include `explorer.oxen.aussie-pools.com` as a remote node.
 
 **Added**
 - Node Finder: Script that scans open nodes for contribution amounts within your desired range. See the README file for
