@@ -1,5 +1,3 @@
-# status_logger
-
 import os
 import logging
 from dotenv import load_dotenv
@@ -22,7 +20,8 @@ f_handler.setLevel(logging.INFO)
 
 # Create formatters and add it to handlers
 c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
-f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s', datefmt='%a %b %d %Y - %I:%M:%S %p')
+f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+                             datefmt='%a %b %d %Y - %I:%M:%S %p')
 c_handler.setFormatter(c_format)
 f_handler.setFormatter(f_format)
 
@@ -31,5 +30,5 @@ logger.addHandler(c_handler)
 logger.addHandler(f_handler)
 
 if __name__ == "__main__":
-  logger.info("This is an INFO log.")
-  logger.warning("This is a WARNING log.")
+    logger.info("This is an INFO log.")
+    logger.warning("This is a WARNING log.")
