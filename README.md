@@ -33,6 +33,11 @@ Please use these scripts at your own risk. I provide no guarantees of accuracy o
  - Add your Oxen Snode PubKey(s) to the `snode_list` in your `node_list.py` file. You can also add or change the remote nodes in the `remote_node_list`. The remote nodes included in the sample file should work out of the box.   
  - Run script in detached screen: `python monitor.py`
 
+### Run Node Finder
+ - After completing the install steps above, start a screen, activate the virtual environment, and run: `python node_finder.py`.
+ - Input the minimum amount you are looking to stake.
+ - Input the maximum amount that you can stake.
+ - Detach screen and let it run.
 
 ### Run as a system service:
  - `cd /etc/systemd/system`
