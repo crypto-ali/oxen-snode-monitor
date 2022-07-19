@@ -1,5 +1,11 @@
 ## Changelog:
 
+### 0.1.1 - 2022-7-19:
+
+**Changed**
+- Bumped `lxml` from `4.6.5` to `4.9.1`. [PR 11](https://github.com/crypto-ali/oxen-snode-monitor/pull/11)
+- Bumped all the other out-of-date dependencies. [PR 12](https://github.com/crypto-ali/oxen-snode-monitor/pull/12)
+
 ### 0.1.0 - 2021-10-4:
 
 **Changed**
