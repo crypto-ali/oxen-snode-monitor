@@ -1,5 +1,5 @@
 import os
-import logging
+import logging.handlers
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -7,6 +7,8 @@ load_dotenv()
 # Variables
 LOG_LEVEL = os.getenv('LOG_LEVEL')
 RUNNING = os.getenv('RUNNING')
+LOG_SIZE = int(os.getenv('LOG_SIZE'))
+LOG_BACKUPS = int(os.getenv('LOG_BACKUPS'))
 
 logger = logging.getLogger(__name__)
 logger_level = logging.getLevelName(LOG_LEVEL)
@@ -25,7 +27,8 @@ logger.addHandler(c_handler)
 
 if RUNNING == 'SCREEN':
     # Initialize logging file handler and file formatter
-    f_handler = logging.FileHandler('status.log')
+    # RotateFileHandler: status.log, append, LOG_SIZE, LOG_BACKUPS.
+    f_handler = logging.handlers.RotatingFileHandler("status.log", "a", LOG_SIZE, LOG_BACKUPS)
     f_handler.setLevel(logging.DEBUG)
     f_format = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                                  datefmt='%a %b %d %Y - %I:%M:%S %p')
