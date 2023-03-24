@@ -1,5 +1,5 @@
 [Unit]
-Description=Loki Service Node Monitor
+Description=Oxen Service Node Monitor
 After=multi-user.target
 
 [Service]
