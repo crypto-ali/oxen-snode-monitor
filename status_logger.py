@@ -12,18 +12,15 @@ logger = logging.getLogger(__name__)
 logger_level = logging.getLevelName(LOG_LEVEL)
 logger.setLevel(logger_level)
 
-
-# Handler
+# Console handler
 c_handler = logging.StreamHandler()
 c_handler.setLevel(logging.DEBUG)
 
-
-# Create formatters and add it to handlers
+# Create formatter and add it to handler
 c_format = logging.Formatter('%(name)s - %(levelname)s - %(message)s')
 c_handler.setFormatter(c_format)
 
-
-# Add handlers to the logger
+# Add handler to the logger
 logger.addHandler(c_handler)
 
 if RUNNING == 'SCREEN':
