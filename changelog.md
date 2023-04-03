@@ -1,5 +1,14 @@
 ## Changelog:
 
+### 0.2.0 - 2023-4-3:
+
+**Changed**
+- `status_logger.py` - updated logger file handler to be optionally initialized by environment variable. Updated logger file handler to rotating log file handler.
+- `sample.env.txt` - Added new `status_logger` related environment variables.
+- `sample-service-file.txt` - Updated the name in the unit description.
+- `sample_node_list.py` - Updated the remote node list to remove two and add one.
+- `monitor.py` - Refactored. Now also checks if a service node is decommissioned or deregistered. 
+
 ### 0.1.2 - 2022-12-26:
 
 **Changed**
