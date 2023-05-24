@@ -1,5 +1,10 @@
 ## Changelog:
 
+### 0.2.1 - 2023-5-24:
+
+**Changed**
+- `requirements.txt` - Bump requests from 2.28.1 to 2.31.0 [PR 15](https://github.com/crypto-ali/oxen-snode-monitor/pull/15)
+
 ### 0.2.0 - 2023-4-3:
 
 **Changed**
