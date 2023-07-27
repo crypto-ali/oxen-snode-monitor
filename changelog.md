@@ -5,7 +5,7 @@
 **Changed**
 - `requirements.txt` - Bump certifi from 2022.12.7 to 2023.7.22 [PR 16](https://github.com/crypto-ali/oxen-snode-monitor/pull/16)
 
-### 0.2.1 - 2023-5-24:
+### 0.2.1 - 2023-7-27:
 
 **Changed**
 - `requirements.txt` - Bump requests from 2.28.1 to 2.31.0 [PR 15](https://github.com/crypto-ali/oxen-snode-monitor/pull/15)
