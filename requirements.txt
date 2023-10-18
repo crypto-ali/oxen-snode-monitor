@@ -10,5 +10,5 @@ pip-upgrade-outdated==1.5
 premailer==3.10.0
 python-dotenv==0.20.0
 requests==2.31.0
-urllib3==1.26.17
+urllib3==1.26.18
 yagmail==0.15.280
