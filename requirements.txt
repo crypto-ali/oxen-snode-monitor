@@ -4,7 +4,7 @@ chardet==5.0.0
 charset-normalizer==2.1.0
 cssselect==1.1.0
 cssutils==2.5.0
-idna==3.3
+idna==3.7
 lxml==4.9.1
 pip-upgrade-outdated==1.5
 premailer==3.10.0
