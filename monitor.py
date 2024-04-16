@@ -214,7 +214,8 @@ def stats_evaluator(sns):
             yag.send(TO, uptime_warning_subject, uptime_warning_body)
         else:
             status_logger.logger.info(f"Oxen service node operational. Last uptime proof accepted at: "
-                                          f"{snlup_time}. Last uptime proof accepted {hrupa} ago.")
+                                          f"{snlup_time}.")
+            status_logger.logger.info(f"Last uptime proof accepted {hrupa} ago.")
             status_logger.logger.info('-' * 130)
 
 
