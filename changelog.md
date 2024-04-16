@@ -1,5 +1,11 @@
 ## Changelog:
 
+### 0.2.5 - 2024-04-16:
+
+**Changed**
+- `requirements.txt` - Bump idna from 3.3 to 3.7 [PR 20](https://github.com/crypto-ali/oxen-snode-monitor/pull/20)
+- `monitor.py` - Update logging of the happy path to improve readability. [PR 21](https://github.com/crypto-ali/oxen-snode-monitor/pull/21)
+
 ### 0.2.4 - 2023-11-09:
 
 **Changed**
