@@ -1,5 +1,10 @@
 ## Changelog:
 
+### 0.2.6 - 2024-06-25:
+
+**Changed**
+- `requirements.txt` - Bump urllib3 from 1.26.18 to 1.26.19 and requests from 2.31.0 to 2.32.3. [PR 23](https://github.com/crypto-ali/oxen-snode-monitor/pull/23)
+
 ### 0.2.5 - 2024-04-16:
 
 **Changed**
