@@ -9,6 +9,6 @@ lxml==4.9.1
 pip-upgrade-outdated==1.5
 premailer==3.10.0
 python-dotenv==0.20.0
-requests==2.31.0
-urllib3==1.26.18
+requests==2.32.3
+urllib3==1.26.19
 yagmail==0.15.280
