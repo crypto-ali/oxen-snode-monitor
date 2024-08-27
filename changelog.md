@@ -1,5 +1,11 @@
 ## Changelog:
 
+### 0.2.7 - 2024-08-27:
+
+**Changed**
+
+- `requirements.txt` - Bump certifi from 2023.7.22 to 2024.7.4. [PR 24](https://github.com/crypto-ali/oxen-snode-monitor/pull/24)
+
 ### 0.2.6 - 2024-06-25:
 
 **Changed**
