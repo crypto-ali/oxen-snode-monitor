@@ -1,5 +1,12 @@
 ## Changelog:
 
+### 0.2.8 - 2025-09-25:
+
+**Changed**
+
+- `requirements.txt` - Bump requests from 2.32.3 to 2.32.4 [PR 25](https://github.com/crypto-ali/oxen-snode-monitor/pull/25)
+- `requirements.txt` - Bump urllib3 from 1.26.19 to 2.5.0 [PR 26](https://github.com/crypto-ali/oxen-snode-monitor/pull/26)
+
 ### 0.2.7 - 2024-08-27:
 
 **Changed**
