@@ -104,6 +104,6 @@ If you'd like to contribute to this script:
 
 ### Tips:
 
-If you use and like this Session Service Node Monitor Script and want to send me a tip as gratitude, you can send Session tips here:
+If you use and like this Session Service Node Monitor Script and want to send me a tip as gratitude, you can send tips here:
 
-`LWwK1wqjC3ecKbxdMz8CVt1MdoEqbDQMiCdjWyWziQ3J9Yyi67w1DVZYXypPVx9uRmUppEAQ8R15ief8mCRMHwWsNsweZGF`
+- Ethereum mainnet and Arbitrum One: `cryptomonhi.eth`
