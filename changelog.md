@@ -1,5 +1,11 @@
 ## Changelog:
 
+### 0.2.9 - 2025-09-26:
+
+**Changed**
+
+- `README.md` - Update the readme to reflect the rebrand from Oxen to Session.
+
 ### 0.2.8 - 2025-09-25:
 
 **Changed**
