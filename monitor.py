@@ -39,9 +39,9 @@ def calculate_allowed_downtime_remaining(earned_downtime_blocks):
 
 def node_selector(node_list):
     """
-    Connect to a Oxen remote node to get service node uptime data.
-    :param node_list: List of Oxen remote nodes to query for service node data.
-    :return: string: URL of the oxen remote node that returned a 200 response.
+    Connect to a Session remote node to get service node uptime data.
+    :param node_list: List of Session remote nodes to query for service node data.
+    :return: string: URL of the Session remote node that returned a 200 response.
     """
     for x in node_list:
         try:
@@ -68,15 +68,15 @@ def no_node_alert():
     :return: Void.
     :raise: TypeError.
     """
-    status_logger.logger.warning("Unable to connect to a Oxen remote node.")
-    no_node_subj = "Unable to connect to a Oxen remote node."
+    status_logger.logger.warning("Unable to connect to a Session remote node.")
+    no_node_subj = "Unable to connect to a Session remote node."
 
-    no_node_body = 'Unable to connect to a Oxen remote node. No nodes in your node list were available.' \
+    no_node_body = 'Unable to connect to a Session remote node. No nodes in your node list were available.' \
                    'Your service node monitor has stopped. Please investigate the issue.'
 
     yag.send(TO, no_node_subj, no_node_body)
 
-    raise TypeError("Unable to connect to a Oxen remote node. Remote node cannot be 'None'.")
+    raise TypeError("Unable to connect to a Session remote node. Remote node cannot be 'None'.")
 
 
 def get_deregistered_snodes(service_node_list, current_snode_stats):
@@ -186,7 +186,7 @@ def stats_evaluator(sns):
             yag.send(TO, decommissioned_snode_subject, decommissioned_snode_body)
             continue
 
-        status_logger.logger.info(f"Your Oxen Service Node's last uptime proof was received at: {snlup_time}")
+        status_logger.logger.info(f"Your Session Service Node's last uptime proof was received at: {snlup_time}")
 
         # Get monitor server's current time.
         current_timestamp = int(time.time())
@@ -205,15 +205,15 @@ def stats_evaluator(sns):
                                             f"Check on the following Service Node immediately: " +
                                             f"{current_snode}")
 
-            uptime_warning_subject = "URGENT: Oxen Service Node Uptime Proof not received"
+            uptime_warning_subject = "URGENT: Session Service Node Uptime Proof not received"
 
-            uptime_warning_body = (f"Your Oxen Service Node uptime proof was last accepted by the network at " 
+            uptime_warning_body = (f"Your Session Service Node uptime proof was last accepted by the network at " 
                                     f"{snlup_time}, over {uptime_proof_age} seconds ago.\n\nCheck on the following "
                                     f"Service Node immediately:\n\n{current_snode}")
 
             yag.send(TO, uptime_warning_subject, uptime_warning_body)
         else:
-            status_logger.logger.info(f"Oxen service node operational. Last uptime proof accepted at: "
+            status_logger.logger.info(f"Session service node operational. Last uptime proof accepted at: "
                                           f"{snlup_time}.")
             status_logger.logger.info(f"Last uptime proof accepted {hrupa} ago.")
             status_logger.logger.info('-' * 130)
@@ -226,7 +226,7 @@ def main():
             no_node_alert()
         else:
             status_logger.logger.info(f"Connected to: {url}")
-            status_logger.logger.info("Getting your Oxen Service Node last uptime proof.")
+            status_logger.logger.info("Getting your Session Service Node last uptime proof.")
 
         response = snode_stats_getter(snode_list, url)
 
