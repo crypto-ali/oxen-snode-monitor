@@ -6,7 +6,7 @@ is currently set to check your node's uptime proof age every five minutes.
 
 ## Session Open Service Node Finder
 
-Open service node finder will be deprecated soon.
+Open service node finder is currently not functional. It requires an update.
 
 ~~I recently built a [node finder script](node_finder.py) to help me find open nodes to contribute to when I have only a
 small amount of Session to contribute. When you run the script it will ask you for the minimum and maximum you are looking
