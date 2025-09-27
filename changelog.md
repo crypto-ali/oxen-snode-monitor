@@ -1,5 +1,12 @@
 ## Changelog:
 
+### 0.2.9 - 2025-09-26:
+
+**Changed**
+
+- Update to reflect the rebranding from Oxen to Session.
+- `sample_node_list.py` - Update `remote_node_list` to remove no longer active remote nodes. 
+
 ### 0.2.8 - 2025-09-25:
 
 **Changed**

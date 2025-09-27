@@ -48,8 +48,8 @@ def open_snode_finder(remote_node_url, min_val, max_val):
 
 
 if __name__ == '__main__':
-    min_amt = input("What is the minimum amount of Oxen you are looking to stake?\n>> ")
-    max_amt = input("What is the maximum amount of Oxen you can stake?\n>> ")
+    min_amt = input("What is the minimum amount of SESH you are looking to stake?\n>> ")
+    max_amt = input("What is the maximum amount of SESH you can stake?\n>> ")
     min_amt = int(min_amt)
     max_amt = int(max_amt)
 
@@ -57,7 +57,7 @@ if __name__ == '__main__':
         try:
             url = node_selector(remote_node_list)
             if url is None:
-                status_logger.logger.error("Unable to connect to an Oxen remote node. Please try again later.\n")
+                status_logger.logger.error("Unable to connect to a Session remote node. Please try again later.\n")
                 sys.exit()
             else:
                 status_logger.logger.info(f"Connected to: {url}")

@@ -1,5 +1,5 @@
 [Unit]
-Description=Oxen Service Node Monitor
+Description=Session Service Node Monitor
 After=multi-user.target
 
 [Service]
